@@ -42,6 +42,30 @@ steps:
             }
           }' \
           "https://dev.azure.com/$(organization)/$(project)/_apis/pipelines?api-version=7.1-preview.1"
+        
+        # Oddziel odpowiedź od kodu HTTP
+        http_code=$(echo "$response" | tail -n1)
+        response_body=$(echo "$response" | sed -e '$d')
+
+        echo "HTTP Status: $http_code for $pipeline_name"
+        echo "Response: $response_body"
+
+        # Sprawdź, czy żądanie się powiodło
+        if [ "$http_code" -ne 200 ]; then
+          echo "Error: Failed to create pipeline $pipeline_name (HTTP $http_code)"
+          exit 1
+        fi
+
+        # Wyodrębnij definitionId z odpowiedzi JSON
+        pipeline_id=$(echo "$response_body" | jq -r '.id')
+        if [ -z "$pipeline_id" ] || [ "$pipeline_id" = "null" ]; then
+          echo "Error: Could not extract pipeline ID for $pipeline_name"
+          exit 1
+        fi
+
+        # Wypisz adres URL pipeline'u
+        pipeline_url="https://dev.azure.com/$(organization)/$(project)/_build?definitionId=$pipeline_id"
+        echo "New pipeline created: $pipeline_url"
       }
 
       # Tworzenie pipeline'ów
