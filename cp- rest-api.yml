@@ -1,0 +1,100 @@
+trigger:
+  branches:
+    include:
+      - main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  - group: pipeline-creation-vars  # Upewnij się, że nazwa grupy jest IDENTYCZNA
+  - name: organization
+    value: 'your-organization'    # Wpisz dokładną nazwę org
+  - name: project
+    value: 'your-project'         # Wpisz dokładną nazwę projektu
+  - name: repositoryId
+    value: 'your-repo-id'         # Wpisz ID repozytorium (nie nazwę!)
+
+steps:
+  - checkout: self
+    persistCredentials: true
+
+  - task: Bash@3
+    displayName: 'Debug: Check Variables'
+    inputs:
+      targetType: 'inline'
+      script: |
+        echo "##[debug] Checking variables availability"
+        echo "Organization: $(organization)"
+        echo "Project: $(project)"
+        echo "Repository ID: $(repositoryId)"
+        echo "PAT variable length: ${#PAT}" # Pokazuje tylko długość tokenu
+
+  - task: Bash@3
+    displayName: 'Create Pipelines via REST API'
+    inputs:
+      targetType: 'inline'
+      script: |
+        # Konfiguracja podstawowa
+        AZURE_DEVOPS_URL="https://dev.azure.com/$(organization)/$(project)/_apis"
+        API_VERSION="api-version=7.1-preview.1"
+        AUTH_HEADER="Authorization: Basic $(echo -n ":${PAT}" | base64 -w0)"
+
+        # Testowe zapytanie do weryfikacji autoryzacji
+        echo "##[section]Testing connection to Azure DevOps..."
+        TEST_RESPONSE=$(curl -sS -H "$AUTH_HEADER" "${AZURE_DEVOPS_URL}/projects?${API_VERSION}")
+        
+        if [ $? -ne 0 ] || [[ "$TEST_RESPONSE" == *"Access denied"* ]]; then
+          echo "##[error]Authentication failed!"
+          echo "##[debug]Response: $TEST_RESPONSE"
+          exit 1
+        else
+          echo "##[section]Successfully authenticated to Azure DevOps"
+        fi
+
+        # Główna funkcja tworząca pipeline
+        create_pipeline() {
+          local pipeline_name=$1
+          local yaml_path=$2
+
+          echo "##[section]Creating pipeline: $pipeline_name with $yaml_path"
+
+          JSON_BODY=$(jq -n \
+            --arg name "$pipeline_name" \
+            --arg path "$yaml_path" \
+            --arg repoId "$(repositoryId)" \
+            '{
+              name: $name,
+              configuration: {
+                type: "yaml",
+                path: $path,
+                repository: {
+                  id: $repoId,
+                  type: "azureReposGit"
+                }
+              }
+            }')
+
+          echo "##[debug]Request body: $JSON_BODY"
+
+          RESPONSE=$(curl -v -X POST \
+            -H "$AUTH_HEADER" \
+            -H "Content-Type: application/json" \
+            -d "$JSON_BODY" \
+            "${AZURE_DEVOPS_URL}/pipelines?${API_VERSION}" 2>&1)
+
+          echo "##[debug]Full response:"
+          echo "$RESPONSE"
+
+          if [[ "$RESPONSE" == *"error"* ]] || [[ "$RESPONSE" == *"exception"* ]]; then
+            echo "##[error]Failed to create pipeline $pipeline_name"
+            exit 1
+          else
+            echo "##[section]Successfully created pipeline: $pipeline_name"
+          fi
+        }
+
+        # Tworzenie pipeline'ów
+        create_pipeline "Pipeline1" "pipeline1.yml"
+    env:
+      PAT: $(PAT)  # Pobiera PAT z grupy zmiennych
