@@ -1,0 +1,53 @@
+trigger:
+  branches:
+    include:
+      - main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  - group: pipeline-creation-vars  # Grupa zmiennych zawierająca PAT
+  - name: organization
+    value: 'your-organization'    # Nazwa organizacji w Azure DevOps (np. 'myorg')
+  - name: project
+    value: 'your-project'         # Nazwa projektu w Azure DevOps (np. 'MyProject')
+  - name: repositoryId
+    value: 'your-repo-id'         # ID repozytorium (można znaleźć w API lub UI)
+
+steps:
+  - checkout: self
+    persistCredentials: true
+
+  - script: |
+      echo "Creating pipelines using Azure DevOps REST API..."
+
+      # Funkcja do tworzenia pipeline'u
+      create_pipeline() {
+        local pipeline_name=$1
+        local yaml_path=$2
+
+        curl -X POST \
+          -H "Authorization: Basic $(echo -n ":$(PAT)" | base64)" \
+          -H "Content-Type: application/json" \
+          -d '{
+            "name": "'"$pipeline_name"'",
+            "configuration": {
+              "type": "yaml",
+              "path": "'"$yaml_path"'",
+              "repository": {
+                "id": "$(repositoryId)",
+                "type": "azureReposGit"
+              }
+            }
+          }' \
+          "https://dev.azure.com/$(organization)/$(project)/_apis/pipelines?api-version=7.1-preview.1"
+      }
+
+      # Tworzenie pipeline'ów
+      create_pipeline "Pipeline1" "pipeline1.yml"
+      create_pipeline "Pipeline2" "pipeline2.yml"
+      create_pipeline "Pipeline3" "pipeline3.yml"
+    displayName: 'Create Pipelines via REST API'
+    env:
+      PAT: $(PAT)  # Użycie zmiennej PAT z grupy zmiennych
