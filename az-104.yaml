@@ -1,0 +1,259 @@
+Topic 1
+Q1
+Problem: Powiązać VMy z działami w jednej grupie zasobów RG1.
+Odpowiedź: C – Assign tags to the virtual machines.
+Q2
+Problem: Conditional Access – Global Admins muszą mieć MFA + Azure AD-joined device z nieufanych lokalizacji.
+Rozwiązanie: zmiana ustawień na stronie Multi-Factor Authentication.
+Odpowiedź: B (No)
+Q3
+To samo wymaganie.
+Rozwiązanie: zmiana Session control.
+Odpowiedź: B (No)
+Q4
+To samo wymaganie.
+Rozwiązanie: zmiana Grant control.
+Odpowiedź: A (Yes)
+Q5
+Problem: Wdrożenie Ubuntu VM z custom trusted root CA.
+Odpowiedź: D – The az vm create command (obsługuje custom data / cloud-init).
+Q6–Q8 (MFA usage model z Per Authentication na Per Enabled User)
+Q6 – reconfigure via Azure portal → B (No)
+Q7 – via Azure CLI → B (No)
+Q8 – nowy MFA provider + backup → B (No)
+(Nie da się zmienić usage model po utworzeniu – trzeba nowego providera.)
+Q9–Q11 (natychmiastowa synchronizacja nowego użytkownika on-prem → Azure AD)
+Q9 – Start-ADSyncSyncCycle -PolicyType Initial → B (No) (powinno być Delta)
+Q10 – Active Directory Sites and Services → B (No)
+Q11 – restart NetLogon → B (No)
+
+Q12
+Problem: Redundancja storage – wiele węzłów + różne lokalizacje geograficzne + odczyt z secondary.
+Odpowiedź: B – Read-only geo-redundant storage (RA-GRS).
+
+Q13–Q15 (przegląd ARM template użytego przez Jon Ross)
+Q13 – Virtual Machine blade → B (No)
+Q14 – Resource Group blade → A (Yes)
+Q15 – Container blade → B (No)
+Q16
+Problem: Allocation failure przy resize VM w availability set.
+Odpowiedź: C – Stop all three VMs.
+Q17
+Problem: Przenieść data disk na inny VM z minimalnym downtime.
+Odpowiedź: C – Detach the data disk (pierwszy krok).
+Q18
+Problem: platformFaultDomainCount – maksymalna dostępność.
+Odpowiedź: D – Max Value (obecnie 3).
+Q19
+Problem: platformUpdateDomainCount – maksymalna dostępność.
+Odpowiedź: B – 20.
+Q20 (DRAG DROP – hasło admina nie w plain text w ARM)
+Odpowiedź: An Azure Key Vault + An access policy.
+Q21
+Problem: Automatyczne uruchomienie skryptów na nowych VMach on-prem (Hyper-V).
+Odpowiedź: A – SetupComplete.cmd w %windir%\setup\scripts.
+Q22
+Problem: Upload generalized image z on-prem do Azure.
+Odpowiedź: B – Add-AzVhd.
+Q23 (DRAG DROP – replikacja Hyper-V VM1 do Azure)
+Odpowiedź: Hyper-V site, Azure Recovery Services Vault, Replication policy, Storage account.
+Q24–Q26 (P2S VPN + peering – brak dostępu do VNetB z Windows 10)
+Q24 – Allow gateway transit on VirtualNetworkA → B (No)
+Q25 – Allow gateway transit on VirtualNetworkB → B (No)
+Q26 – Re-download/re-install VPN client → A (Yes)
+Q27
+Problem: Dostęp remote workers do VMów w VNet1.
+Odpowiedź: C – Point-to-Site (P2S) VPN.
+Q28–Q30 (Internal Load Balancer jako listener dla SQL Always On AG)
+Q28 – HTTP health probe port 1433 → B (No)
+Q29 – Session persistence = Client IP → B (No)
+Q30 – Enable Floating IP → A (Yes)
+Q31
+Problem: Statyczne prywatne IP dla dwóch VMów.
+Odpowiedź: C – Modify the VM properties in the Azure Management Portal (lub E – Set-AzureStaticVNetIP – starsza komenda).
+Q32
+Problem: 5 VMów z public+private IP, identyczne reguły NSG.
+Odpowiedź: A – 5 network interfaces.
+Q33
+To samo – ile NSG.
+Odpowiedź: D – 1.
+Q34
+Problem: Odzysk plików z Azure Backup Instant Restore po ransomware.
+Odpowiedź: B – Można odzyskać do dowolnego VM w subskrypcji.
+Q35
+Problem: Pełne przywrócenie VM po ransomware.
+Odpowiedź: C – Restore the VM to a new Azure VM.
+Q36
+Problem: Diagnoza problemów wydajnościowych metryk infrastruktury.
+Odpowiedź: B – Azure Monitor.
+Q37
+Problem: Które VMy można backupować do Recovery Services vault.
+Odpowiedź: B, C, D, E (Windows Server 2012+, Debian 8.2+, działające i wyłączone; Windows 10 – tylko w określonych scenariuszach, ale klasycznie B+C+D+E).
+Q38–Q40 (masowe tworzenie 500 guest users z CSV)
+Q38 – New-AzureADUser → B (No)
+Q39 – Bulk create user w portalu → B (No)
+Q40 – New-AzureADMSInvitation → A (Yes)
+Topic 2
+Q1 (HOTSPOT)
+Least privilege dla LB1/LB2:
+
+Backend pool do LB1 → Network Contributor on LB1
+Health probe do LB2 → Network Contributor on LB2
+
+Q2
+Problem: Brak możliwości nadania dostępu do AKS użytkownikom z contoso.com.
+Odpowiedź: B – From contoso.com, create an OAuth 2.0 authorization endpoint (lub integracja AAD).
+Q3
+Problem: Grupy automatycznie usuwane po 180 dniach (Microsoft 365 + SharePoint).
+Odpowiedź: A i C – Microsoft 365 group (Assigned + Dynamic User) – tylko Microsoft 365 groups wspierają expiration.
+Q4 (HOTSPOT – Access Review)
+
+User3 może review User1 → No (scope = Guest users only)
+User3 może review UserA → No
+User3 może review UserB → Yes
+
+Q5 (HOTSPOT – Management Groups + Policy)
+
+Można stworzyć VNet w Subscription1 → No (Not allowed na Tenant Root)
+Można stworzyć VM w Subscription2 → Yes
+Można dodać Subscription1 do ManagementGroup11 → Yes
+
+Q6
+Problem: Policy „Not allowed resource types” (Microsoft.Sql/servers) na Subscription1 z exclusion ContosoRG1.
+Odpowiedź: B – Można tworzyć Azure SQL servers tylko w ContosoRG1.
+Q7 (HOTSPOT – Apply tag policy)
+
+VNET1 → Department: D1 only (policy nie nadpisuje istniejących)
+VNET2 → Label: Value1 only (nowy zasób dostaje tag z policy)
+
+Q8
+Problem: Które zasoby można przenieść do nowej subskrypcji AZPT2.
+Odpowiedź: C – Wszystkie (VM1, storage1, VNET1, VM1Managed, RVAULT1).
+Q9
+Problem: Błąd „Legal terms have not been accepted” przy Marketplace.
+Odpowiedź: C – Set-AzMarketplaceTerms.
+Q10
+Problem: Przypisanie roli User administrator.
+Odpowiedź: B – From the Directory role blade, modify the directory role.
+Q11
+Problem: Przypisanie 10 licencji Azure AD Premium P2.
+Odpowiedź: A – From the Licenses blade of Azure AD, assign a license.
+Q12
+Problem: Alert w System Center Service Manager gdy pamięć VM1 < 10%.
+Odpowiedź: C – Deploy the IT Service Management Connector (ITSM).
+Q13
+Problem: Dodać admin1@contoso.com jako lokalnego administratora na wszystkich Azure AD joined komputerach.
+Odpowiedź: A – Device settings from the Devices blade.
+
+Topic 2 
+Q14
+Problem: Użytkownik ma mieć możliwość tworzenia i zarządzania Azure AD groups, ale nie może zarządzać użytkownikami.
+Odpowiedź: Assign the Groups Administrator role.
+Q15
+Problem: Chcesz, żeby użytkownicy mogli rejestrować swoje urządzenia w Azure AD, ale nie mogli dołączać ich do domeny.
+Odpowiedź: Configure device settings → Users may join Azure AD = Selected / None (w zależności od dokładnej wersji pytania).
+Q16–Q20 (seria Conditional Access / MFA / device compliance)
+Typowe odpowiedzi:
+
+Grant control = Require MFA + Require compliant device
+Session control = Sign-in frequency / Conditional Access App Control
+Najczęściej poprawna opcja to Grant controls, nie Session controls.
+
+Q21
+Problem: Chcesz automatycznie przypisywać licencje na podstawie członkostwa w grupie.
+Odpowiedź: Use group-based licensing (Licenses blade → assign to group).
+Q22
+Problem: Masz wiele subskrypcji i chcesz zarządzać nimi centralnie.
+Odpowiedź: Azure Management Groups.
+Q23
+Problem: Chcesz ograniczyć, jakie typy zasobów można tworzyć w subskrypcji.
+Odpowiedź: Azure Policy (Not allowed resource types / Allowed resource types).
+Q24
+Problem: Chcesz, żeby tagi były obowiązkowe przy tworzeniu zasobów.
+Odpowiedź: Azure Policy – Require a tag and its value / Apply tag and its default value.
+Q25
+Problem: Przeniesienie zasobów między subskrypcjami.
+Odpowiedź: Większość zasobów (VM, Storage, VNet, Managed Disk, Recovery Services Vault) można przenieść – wyjątki to np. niektóre App Service, Classic resources.
+Topic 3 – Networking
+Q1–Q10 (typowy zestaw)
+
+Site-to-Site VPN → Virtual Network Gateway + Local Network Gateway
+Point-to-Site → Virtual Network Gateway + VPN client package
+VNet Peering → Allow gateway transit / Use remote gateways
+Service Endpoints vs Private Endpoints
+NSG + Application Security Groups
+Azure Firewall vs NSG
+Load Balancer (Basic vs Standard) + Health probes + Floating IP (dla SQL Always On)
+Application Gateway + WAF
+Traffic Manager vs Front Door vs CDN
+
+Najczęstsze poprawne odpowiedzi:
+
+P2S dla remote workers
+Enable Floating IP dla SQL AG listener
+Re-download VPN client po peerowaniu
+Private Endpoint dla PaaS (Storage, SQL, Key Vault)
+
+Topic 4 – Storage
+Q1
+Problem: Maksymalna wydajność i dostępność + odczyt z secondary.
+Odpowiedź: Read-access geo-redundant storage (RA-GRS) lub RA-GZRS.
+Q2
+Problem: Tani storage tylko w jednym regionie.
+Odpowiedź: Locally-redundant storage (LRS).
+Q3
+Problem: Dostęp do blobów tylko z określonych VNetów.
+Odpowiedź: Service endpoints lub Private endpoints + firewall.
+Q4
+Problem: Shared Access Signature z możliwością odwołania.
+Odpowiedź: Stored access policy.
+Q5
+Problem: Azure Files z Active Directory authentication.
+Odpowiedź: Enable Azure AD DS / Microsoft Entra Domain Services authentication lub Kerberos.
+Topic 5 – Compute (VMs, Availability, Scale Sets)
+Q1
+Problem: Allocation failure przy resize w Availability Set.
+Odpowiedź: Stop all VMs in the set.
+Q2
+Problem: Maksymalna odporność na awarie fabryki.
+Odpowiedź: platformFaultDomainCount = Max (3), platformUpdateDomainCount = 20.
+Q3
+Problem: Przenieść data disk z minimalnym downtime.
+Odpowiedź: Detach → Attach to new VM.
+Q4
+Problem: Custom image z on-prem.
+Odpowiedź: Sysprep / waagent -deprovision → Add-AzVhd → Create image.
+Q5
+Problem: Automatyczne uruchamianie skryptów po pierwszym starcie.
+Odpowiedź: Custom Script Extension lub cloud-init / SetupComplete.cmd.
+Topic 6 – Monitoring, Backup, Recovery
+Q1
+Problem: Backup VMów (Windows + Linux).
+Odpowiedź: Azure Backup (Recovery Services vault) – wspiera Windows Server 2012+, Debian, Ubuntu, RHEL, CentOS, zarówno running jak i stopped.
+Q2
+Problem: Odzysk plików po ransomware.
+Odpowiedź: File Recovery (Instant Restore) → można do dowolnego VM.
+Q3
+Problem: Pełny restore VM.
+Odpowiedź: Restore to a new VM.
+Q4
+Problem: Alerty do System Center Service Manager.
+Odpowiedź: IT Service Management Connector (ITSM).
+Q5
+Problem: Diagnostyka wydajności.
+Odpowiedź: Azure Monitor (Metrics + Logs).
+
+Topic 7 – Identity & Governance
+Q1
+Problem: Masowe tworzenie guest users.
+Odpowiedź: New-AzureADMSInvitation (lub Bulk invite w portalu).
+Q2
+Problem: Access Reviews tylko dla guestów.
+Odpowiedź: Scope = Guest users only + Reviewers = Group owners.
+Q3
+Problem: Least privilege dla Load Balancerów.
+Odpowiedź: Network Contributor na poziomie zasobu LB (nie Owner, nie Contributor na RG).
+Q4
+Problem: Policy inheritance w Management Groups.
+Odpowiedź: Polityki z wyższych poziomów dziedziczą się w dół (Deny wygrywa).
+
