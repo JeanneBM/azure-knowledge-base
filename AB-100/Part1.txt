@@ -1,0 +1,249 @@
+Architektura agensyjnego rozwiązania biznesowego AI
+Transformacja sztucznej inteligencji jest bardziej niż uaktualnienie technologii — jest to strategiczna zmiana, która znacząco wpływa na procesy biznesowe, osoby i kulturę organizacyjną. W tym zmieniającym się krajobrazie architekci odgrywają kluczową rolę w zapewnieniu, że rozwiązania sztucznej inteligencji zapewniają wymierną wartość biznesową przy zachowaniu zgodności, skalowalności i bezpieczeństwa.
+
+Architekci łączą lukę między strategią biznesową a implementacją techniczną. Ich obowiązki obejmują dostosowanie inicjatyw sztucznej inteligencji do celów organizacyjnych, projektowanie rozwiązań integrujących sztuczną inteligencję z istniejącymi systemami, ustanawianie ram ładu w zakresie odpowiedzialnego używania sztucznej inteligencji oraz zapewnienie skalowalności rozwiązań do zmieniających się potrzeb biznesowych.
+
+Kluczowe obowiązki architekta sztucznej inteligencji obejmują definiowanie wizji i planu wdrażania sztucznej inteligencji, zapewnianie gotowości i ładu danych, integrowanie usług sztucznej inteligencji z przepływami pracy przedsiębiorstwa, implementowanie zasad odpowiedzialnej sztucznej inteligencji, takich jak sprawiedliwość i przejrzystość, oraz monitorowanie wydajności za pomocą jasnych wskaźników KPI. Te obowiązki zapewniają, że rozwiązania sztucznej inteligencji są zarówno skuteczne, jak i dostosowane do priorytetów biznesowych.
+
+Proces transformacji sztucznej inteligencji zwykle jest zgodny ze strukturą: począwszy od definiowania celów biznesowych, przechodzenia do opracowywania strategii sztucznej inteligencji, projektowania architektury, implementacji i wreszcie monitorowania i optymalizacji. Takie podejście zapewnia, że wdrażanie sztucznej inteligencji jest systematyczne i oparte na wynikach, co wspiera długoterminowy sukces biznesowy.
+
+Aby skalować sztuczną inteligencję w całym przedsiębiorstwie, najlepsze rozwiązania obejmują rozpoczęcie od mierzalnych wyników biznesowych, przyjęcie modułowych i elastycznych zasad projektowania, ustalanie priorytetów odpowiedzialnych sztucznej inteligencji, wspieranie współpracy między uczestnikami projektu oraz korzystanie z usług sztucznej inteligencji platformy Microsoft Azure w celu przyspieszenia i niezawodności. Dzięki tym rozwiązaniom organizacje mogą zmaksymalizować wartość inwestycji w sztuczną inteligencję przy zachowaniu zaufania i zgodności.
+
+Wspieranie transformacji sztucznej inteligencji za pomocą strategii architekta
+Ukończone
+100 pkt.
+3 min
+Cele nauczania
+Po zakończeniu tej jednostki uczestnicy będą w stanie:
+
+Wyjaśnienie roli architekta w prowadzeniu wdrażania i transformacji sztucznej inteligencji.
+
+Identyfikowanie kluczowych obowiązków architekta sztucznej inteligencji w kontekstach biznesowych.
+
+Dowiedz się, jak architekci dostosowują rozwiązania sztucznej inteligencji do celów organizacji.
+
+Zastosuj najlepsze rozwiązania dotyczące skalowania sztucznej inteligencji w środowiskach przedsiębiorstwa.
+
+Wprowadzenie
+Transformacja sztucznej inteligencji jest bardziej niż uaktualnienie technologii — jest to strategiczna zmiana, która ma wpływ na procesy, ludzi i kulturę. Architekci odgrywają kluczową rolę w zapewnieniu, że rozwiązania sztucznej inteligencji zapewniają wymierną wartość biznesową przy zachowaniu zgodności, skalowalności i bezpieczeństwa.
+
+Rola architekta w transformacji sztucznej inteligencji
+Architekci łączą lukę między strategią biznesową a implementacją techniczną. Ich obowiązki obejmują:
+
+Dostosowanie strategiczne: Zapewnianie, że inicjatywy sztucznej inteligencji obsługują cele organizacji.
+
+Projekt rozwiązania: tworzenie architektur integrujących sztuczną inteligencję z istniejącymi systemami.
+
+Zarządzanie i zgodność: Ustanów struktury dla odpowiedzialnego używania sztucznej inteligencji.
+
+Skalowalność: Projektowanie rozwiązań, które rosną wraz z potrzebami biznesowymi.
+
+Obowiązki architekta sztucznej inteligencji
+
+Odpowiedzialność	Opis
+Wizja i harmonogram działania	Definiowanie strategii wdrażania sztucznej inteligencji dostosowanej do priorytetów
+Architektura danych	Zapewnienie gotowości danych i zarządzania
+Integracja	Łączenie usług sztucznej inteligencji z przepływami pracy przedsiębiorstwa
+Zabezpieczenia i etyka	Implementowanie zasad odpowiedzialnej sztucznej inteligencji
+Monitorowanie wydajności	Ustanawianie kluczowych wskaźników wydajności i monitorowanie skuteczności
+Struktura transformacji sztucznej inteligencji
+
+Przepływ: Cele biznesowe → strategii sztucznej inteligencji → projektowania architektury → implementacji → monitorowania i optymalizacji
+
+Diagram przedstawiający przepływ struktury transformacji sztucznej inteligencji z celów biznesowych przez monitorowanie i optymalizację.
+
+Przewodnik Cloud Adoption Framework dla sztucznej inteligencji
+
+Najlepsze rozwiązania dla architektów sztucznej inteligencji
+
+Zacznij od wyników biznesowych — skoncentruj się na wymiernym wpływie.
+
+Wdrażanie modułowego projektu pod kątem elastyczności i skalowalności.
+
+Określanie priorytetów zasad odpowiedzialnej sztucznej inteligencji (sprawiedliwość, przejrzystość, odpowiedzialność).
+
+Współpraca między zespołami — analitycy danych, deweloperzy i liderzy biznesowi.
+
+Użyj usług Azure AI, aby uzyskać szybkość i niezawodność.
+
+Skalowanie sztucznej inteligencji w całym przedsiębiorstwie
+
+Automatyzacji: Usprawnij wdrażanie i monitorowanie.
+
+Standaryzacji: Użyj typowych struktur i narzędzi.
+
+Ciągłe uczenie: Umożliwianie ewolucji modeli przy użyciu nowych danych.
+
+Szkolenie użytkowników: włączanie kultury ciągłego uczenia użytkowników
+
+Identyfikowanie technologii sztucznej inteligencji firmy Microsoft dla rozwiązań biznesowych
+Ukończone
+100 pkt.
+3 min
+Cele nauczania
+Po zakończeniu tej jednostki uczestnicy będą w stanie:
+
+Identyfikowanie podstawowych technologii sztucznej inteligencji firmy Microsoft i ich roli w rozwiązaniach biznesowych.
+
+Wyjaśnienie, w jaki sposób technologie sztucznej inteligencji tworzą wartość biznesową.
+
+Dowiedz się, jak generowanie sztucznej inteligencji zwiększa produktywność w środowiskach przedsiębiorstwa.
+
+Wprowadzenie
+Technologie sztucznej inteligencji firmy Microsoft umożliwiają organizacjom wprowadzanie innowacji, automatyzowanie i skalowanie procesów biznesowych. Od usług sztucznej inteligencji platformy Azure po rozwiązania Copilot te narzędzia pomagają firmom dostarczać mierzalne wyniki, poprawiać podejmowanie decyzji i zwiększać produktywność.
+
+Podstawowe składniki technologii sztucznej inteligencji firmy Microsoft
+Usługi sztucznej inteligencji platformy Azure
+
+Cognitive Services: Wstępnie utworzone interfejsy API do przetwarzania obrazów, mowy, języka i podejmowania decyzji.
+
+Azure Machine Learning: Narzędzia do tworzenia, trenowania i wdrażania modeli uczenia maszynowego.
+
+Azure OpenAI Service: Uzyskiwanie dostępu do zaawansowanych modeli generacyjnych sztucznej inteligencji na potrzeby języka naturalnego i zadań kreatywnych.
+
+Generowanie sztucznej inteligencji na potrzeby produktywności
+
+Automatyzuje powtarzające się zadania.
+
+Generuje zawartość i szczegółowe informacje.
+
+Zwiększa współpracę między zespołami.
+
+Rozwiązania biznesowe sztucznej inteligencji
+
+Osadzona sztuczna inteligencja w usługach Microsoft 365 i Dynamics 365.
+
+Rozwiązania Copilot usprawniają przepływy pracy i zwiększają wydajność.
+
+Diagram przedstawiający ekosystem agentów sztucznej inteligencji firmy Microsoft z rozwiązaniami Copilot, usługami sztucznej inteligencji platformy Azure oraz narzędziami i zestawami SDK.
+
+Najważniejsze składniki
+
+Składnik	Przeznaczenie
+Cognitive Services	Wizja, Mowa, Język, Decyzja APIs
+Azure Machine Learning	Tworzenie, trenowanie i wdrażanie modeli uczenia maszynowego
+Azure OpenAI Service	Generowanie sztucznej inteligencji na potrzeby tekstu i kreatywności
+Copilot Solutions	Osadzona sztuczna inteligencja na potrzeby produktywności
+Najlepsze rozwiązania dotyczące wartości biznesowej
+
+Zacznij od mierzalnych wyników biznesowych.
+
+Zaimplementuj sztuczną inteligencję w odpowiedzialny sposób (sprawiedliwość, niezawodność i bezpieczeństwo, prywatność i bezpieczeństwo, inkluzywność, przejrzystość, odpowiedzialność).
+
+Użyj skalowalności chmury do wdrożenia w całym przedsiębiorstwie.
+
+Rozpoznawanie gotowych do użycia agentów sztucznej inteligencji Microsoft dla biznesu
+Ukończone
+100 pkt.
+3 min
+Cele nauczania
+Po zakończeniu tej jednostki uczestnicy będą w stanie:
+
+Wyjaśnij, czym są agenci sztucznej inteligencji firmy Microsoft OOB, oraz ich rola w automatyzacji procesów biznesowych.
+
+Identyfikowanie wstępnie utworzonych agentów sztucznej inteligencji dostępnych w programie Microsoft Copilot Studio.
+
+Dowiedz się, jak szablony i biblioteki scenariuszy przyspieszają wdrażanie sztucznej inteligencji.
+
+Poznaj najlepsze rozwiązania dotyczące odpowiedzialnego i efektywnego używania agentów sztucznej inteligencji.
+
+Wprowadzenie
+Firma Microsoft udostępnia gotowych do użycia agentów sztucznej inteligencji (OOB), aby pomóc organizacjom szybko zintegrować sztuczną inteligencję z przepływami pracy bez rozpoczynania od podstaw. Ci agenci mają na celu zautomatyzowanie typowych procesów biznesowych, zwiększenie wydajności i zapewnienie zgodności z zasadami odpowiedzialnej sztucznej inteligencji.
+
+Podstawowe pojęcia
+Co to są agenci OOB AI
+
+Wstępnie utworzeni agenci i szablony sztucznej inteligencji dostępni w Microsoft Copilot Studio i w usłudze Microsoft 365
+
+Zaprojektowane pod kątem typowych scenariuszy, takich jak:
+
+Automatyzacja obsługi klienta.
+
+Optymalizacja przepływu pracy.
+
+Podejmowanie decyzji opartych na danych.
+
+Korzyści
+
+Szybsze wdrażanie: Skrócenie czasu programowania dzięki gotowym do użycia agentom.
+
+Skalowalność: Skompilowany do integracji z platformami Microsoft 365 i Dynamics 365.
+
+Zgodności: Zgodność ze standardami odpowiedzialnej sztucznej inteligencji firmy Microsoft.
+
+Kluczowe zasoby
+
+Copilot Studio: Zapoznaj się ze wstępnie utworzonymi agentami i dostosuj je do własnych potrzeb.
+
+Szablony: Podstawy szablonu umożliwiają tworzenie dostosowanych rozwiązań sztucznej inteligencji.
+
+Biblioteka scenariuszy: Uzyskiwanie dostępu do przewodników wdrażania i najlepszych rozwiązań dotyczących sztucznej inteligencji w przedsiębiorstwie.
+
+Najlepsze praktyki
+
+Zacznij od wyników biznesowych przed wybraniem narzędzi.
+
+Używanie wstępnie utworzonych agentów do szybkiego wdrażania.
+
+Zapewnianie zasad odpowiedzialnej sztucznej inteligencji (sprawiedliwość, niezawodność i bezpieczeństwo, prywatność i bezpieczeństwo, inkluzywność, przejrzystość, odpowiedzialność).
+
+Korzystanie ze sztucznej inteligencji platformy Azure w celu zapewnienia skalowalności i zgodności.
+
+Podsumowanie
+Ukończone
+100 pkt.
+3 min
+Ten moduł zawiera kompleksowe omówienie strategicznych i architektonicznych podstaw wymaganych do pomyślnej transformacji sztucznej inteligencji w środowiskach biznesowych, koncentrując się na technologiach i najlepszych rozwiązaniach firmy Microsoft.
+
+Kluczowe wnioski
+
+Transformacja sztucznej inteligencji jako strategiczna zmiana
+
+Wdrażanie sztucznej inteligencji nie jest tylko uaktualnieniem technologii, ale strategiczną inicjatywą, która ma wpływ na procesy biznesowe, osoby i kulturę organizacyjną. Sukces wymaga jasnego dopasowania do celów biznesowych i mierzalnych wyników.
+
+Rola architekta sztucznej inteligencji
+
+Architekci są kluczowi w zakresie mostkowania strategii biznesowej z implementacją techniczną. Ich obowiązki obejmują:
+
+Definiowanie wizji i planu wdrożenia sztucznej inteligencji.
+Zapewnienie gotowości danych i zarządzania nimi.
+Integrowanie usług sztucznej inteligencji z przepływami pracy przedsiębiorstwa.
+Implementowanie zasad odpowiedzialnej sztucznej inteligencji (sprawiedliwość, przejrzystość, odpowiedzialność).
+Monitorowanie wydajności za pomocą kluczowych wskaźników wydajności (KPI).
+Struktura transformacji sztucznej inteligencji
+
+Zasadnicze znaczenie ma ustrukturyzowane podejście, które zazwyczaj obejmuje następujące etapy:
+
+Zdefiniuj cele biznesowe.
+Opracowywanie strategii sztucznej inteligencji.
+Projektowanie architektury.
+Zaimplementuj rozwiązania.
+Monitorowanie i optymalizowanie pod kątem ciągłego ulepszania.
+Najlepsze rozwiązania dotyczące skalowania sztucznej inteligencji
+
+Zacznij od mierzalnych wyników biznesowych.
+Wdrażanie modułowych i elastycznych zasad projektowania pod kątem skalowalności.
+Priorytetyzuj odpowiedzialną sztuczną inteligencję, aby zapewnić zgodność i zaufanie.
+Wspieraj współpracę między uczestnikami projektu, w tym analitykami danych, deweloperami i liderami biznesowymi.
+Korzystaj z usług sztucznej inteligencji platformy Microsoft Azure, aby przyspieszyć, niezawodność i wdrożenie w całym przedsiębiorstwie.
+Omówienie technologii sztucznej inteligencji firmy Microsoft
+
+Podstawowe oferty sztucznej inteligencji firmy Microsoft obejmują:
+
+Usługi Azure AI: wstępnie utworzone interfejsy API do przetwarzania obrazów, mowy, języka i decyzji.
+Azure Machine Learning: narzędzia do tworzenia, trenowania i wdrażania modeli uczenia maszynowego.
+Azure OpenAI Service: dostęp do zaawansowanych modeli generacyjnych sztucznej inteligencji.
+Copilot Solutions: Zintegrowana AI w Microsoft 365 i Dynamics 365, automatyzuje przepływy pracy i zwiększa produktywność.
+Azure Foundry i Copilot Studio: platformy do tworzenia, wdrażania i zarządzania aplikacjami i agentami sztucznej inteligencji.
+Od razu działające zasoby agenta sztucznej inteligencji (OOB)
+
+Firma Microsoft udostępnia wstępnie utworzonych agentów sztucznej inteligencji, szablonów i bibliotek scenariuszy za pośrednictwem programu Copilot Studio i usługi Azure AI, umożliwiając szybkie wdrażanie i integrację.
+
+Te zasoby pomagają zautomatyzować typowe procesy biznesowe, skrócić czas programowania i zapewnić zgodność z odpowiedzialną sztuczną inteligencją.
+
+Zasady odpowiedzialnej sztucznej inteligencji
+
+Odpowiedzialne używanie sztucznej inteligencji jest fundamentalne, podkreślając uczciwość.
+
+
+
