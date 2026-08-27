@@ -245,5 +245,400 @@ Zasady odpowiedzialnej sztucznej inteligencji
 
 Odpowiedzialne używanie sztucznej inteligencji jest fundamentalne, podkreślając uczciwość.
 
+Wprowadzenie
+Ukończone
+100 pkt.
+3 min
+W dzisiejszym szybko zmieniającym się środowisku biznesowym agenci sztucznej inteligencji (AI) definiują sposób działania organizacji, podejmowania decyzji i zwiększania produktywności. W tym module przedstawiono podstawowe pojęcia wymagane do analizowania, projektowania i implementowania opartych na sztucznej inteligencji rozwiązań biznesowych, koncentrując się na krytycznej roli agentów w automatyzacji zadań, analizie danych, podejmowaniu decyzji i zarządzaniu danymi przedsiębiorstwa.
+
+Agenci sztucznej inteligencji automatyzują rutynowe zadania, dostarczają szczegółowe informacje oparte na danych i obsługują decyzje strategiczne, integrując kontekst przedsiębiorstwa z możliwościami generowania sztucznej inteligencji. Rozwiązania, takie jak Microsoft Copilot, przynoszą te korzyści bezpośrednio znanym narzędziom zwiększającym produktywność, w tym Word, Outlook, Teams i Dynamics 365, dzięki czemu pracownicy mogą pracować szybciej i z większym zaufaniem.
+
+Generowanie sztucznej inteligencji jeszcze bardziej przyspiesza produktywność, opracowując zawartość, podsumowując informacje i umożliwiając interakcję języka naturalnego z danymi i systemami. Ta technologia umożliwia tworzenie oryginalnej zawartości w różnych formatach, takich jak tekst, obrazy, filmy wideo, audio i kod oprogramowania, odblokowywanie nowych poziomów wydajności i kreatywności.
+
+Aby zapewnić niezawodne i odpowiedzialne wdrożenie sztucznej inteligencji, niezbędne jest zrozumienie sposobu interakcji agentów z danymi biznesowymi. Wysokiej jakości, dobrze zorganizowane i dostępne dane stanowią podstawę skutecznych rozwiązań sztucznej inteligencji. ** Proponowane koncepcje, takie jak ustalenie podstaw, gdzie agenci sztucznej inteligencji reagują przy użyciu zaufanych, domenowo specyficznych danych organizacyjnych, mają kluczowe znaczenie dla zminimalizowania błędów, a także utrzymania zabezpieczeń i zgodności. Technologie, takie jak indeksowanie semantyczne i Copilot Retrieval API, zapewniają, że agenci sztucznej inteligencji pobierają kontekstowo dokładne informacje z odpowiednimi uprawnieniami, zapewniając wiarygodne wyniki.
+
+Ten moduł podkreśla również znaczenie organizowania danych rozwiązań biznesowych na potrzeby gotowości do sztucznej inteligencji. Korzystanie z platform takich jak Azure, Bazy danych firmy Microsoft i nowoczesne wzorce architektury danych umożliwia organizacjom scentralizowanie, struktury i zarządzanie danymi, dzięki czemu można je odnajdywać i używać dla szerokiej gamy systemów sztucznej inteligencji, w tym Copilot, agentów autonomicznych i niestandardowych aplikacji sztucznej inteligencji.
+
+W tym module uczniowie poznają najlepsze rozwiązania dotyczące implementowania agentów sztucznej inteligencji, zapewniając jakość danych w zakresie dokładności, istotności, osi czasu, czystości i dostępności oraz strukturyzowania danych przedsiębiorstwa pod kątem skalowalnego użycia sztucznej inteligencji. Gdy organizacje stosują te zasady, odblokowują wymierną wartość, napędzają transformację i wspierają odpowiedzialne podejmowanie decyzji za pomocą rozwiązań opartych na sztucznej inteligencji.
+
+Ocena użycia agentów w automatyzacji zadań, analizie danych i podejmowaniu decyzji
+Ukończone
+100 pkt.
+5 min
+Cele nauki
+Po zakończeniu tej jednostki uczestnicy będą w stanie:
+
+Wyjaśnienie, w jaki sposób agenci sztucznej inteligencji obsługują automatyzację zadań, analizę danych i podejmowanie decyzji.
+Opisz, w jaki sposób doświadczenia Microsoft Copilot zwiększają produktywność w przepływach pracy.
+Określenie, w jaki sposób generowanie sztucznej inteligencji zwiększa produktywność i wspiera odpowiedzialne podejmowanie decyzji.
+Ocena scenariuszy, w których agenci dodają wymierną wartość dla środowisk przedsiębiorstwa.
+1. Wprowadzenie
+Agenci sztucznej inteligencji przekształcają sposób działania organizacji. Automatyzują powtarzalne zadania, udostępniają szczegółowe informacje oparte na danych i obsługują podejmowanie decyzji, integrując kontekst przedsiębiorstwa z możliwościami generowania sztucznej inteligencji.
+
+Doświadczenia z Microsoft Copilot wprowadzają te funkcje bezpośrednio do znanych narzędzi, które są niezbędne do pracy — takich jak Word, Outlook, Teams, Dynamics 365 i inne — pomagając pracownikom działać szybciej i z większą pewnością siebie.
+
+Generowanie sztucznej inteligencji przyspiesza produktywność, opracowując zawartość, podsumowując informacje i umożliwiając interakcję języka naturalnego z danymi i systemami w celu tworzenia oryginalnej zawartości, takiej jak tekst, obrazy, wideo, audio, kod oprogramowania lub inne formy danych.
+
+2. Rola agentów w automatyzacji zadań
+Agenci pomagają organizacjom usprawniać i automatyzować zadania, które tradycyjnie wymagają ręcznej pracy.
+
+Kluczowe możliwości:
+
+Przygotowywanie dokumentów, wiadomości e-mail lub odpowiedzi na podstawie kontekstu.
+
+Podsumowanie dużych ilości danych — wiadomości e-mail, spotkań, czatów.
+
+Automatyzowanie przepływów pracy za pomocą technologii takich jak Microsoft 365, Copilot Studio, Azure Foundry i Power Platform.
+
+Wyzwalanie procesów wieloetapowych (zatwierdzeń, powiadomień, generowania zawartości).
+
+Te możliwości zmniejszają obciążenie poznawcze i pomagają zespołom skupić się na strategicznych, nie powtarzalnych zadaniach.
+
+Przykłady automatyzacji zadań sterowanej przez agenta
+
+Obszar zadania	Jak agenci pomagają	Narzędzia
+Komunikacja	Tworzenie wersji roboczych e-maili, podsumowywanie wątków w aplikacji Teams, tworzenie notatek ze spotkań	Microsoft 365 Copilot
+dokumentacja	Generowanie raportów pierwszej wersji roboczej, ponowne zapisywanie lub optymalizowanie zawartości	Word, OneNote, Loop, Microsoft 365 Copilot
+Automatyzacja procesów	Wyzwalanie przepływów pracy i zadań wieloetapowych	Copilot Studio, Power Automate
+Wyszukiwanie wiedzy	Odpowiadanie na pytania przy użyciu danych przedsiębiorstwa	Copilot Search, uzasadnienie grafu
+3. Agenci w analizie danych
+Agenci sztucznej inteligencji upraszczają i przyspieszają analizę danych, konwertując pytania języka naturalnego na szczegółowe odpowiedzi.
+
+Podstawowe możliwości agenta:
+
+Podsumowanie złożonych zestawów danych w szczegółowe informacje z możliwością działania
+
+Identyfikowanie trendów, elementów odstających i wzorców
+
+Generowanie wizualizacji na żądanie
+
+Interpretowanie pulpitów nawigacyjnych i sugerowanie kolejnych kroków
+
+Środowisko Copilot pomaga pracownikom zrozumieć dane bez konieczności posiadania zaawansowanych umiejętności analitycznych.
+
+Diagram wizualny: Agenci sztucznej inteligencji w przepływie pracy analizy
+
+Diagram przedstawiający sposób, w jaki agenci sztucznej inteligencji integrują się z przepływem pracy analizy, od pozyskiwania danych przez generowanie szczegółowych informacji i obsługę decyzji.
+
+4. Agenci w podejmowaniu decyzji
+Agenci obsługują decyzje strategiczne i operacyjne za pomocą następujących działań:
+
+Dane wejściowe do decyzji wspierane przez AI:
+
+Zalecenia dotyczące scenariuszy oparte na danych historycznych
+
+Identyfikacja ryzyka za pomocą rozpoznawania wzorców
+
+Podsumowanie kontekstu biznesowego z dokumentów, spotkań i zestawów danych
+
+Rekomendacje wspierane przez wiedzę przedsiębiorstwa
+
+Generatywna sztuczna inteligencja umożliwia liderom eksplorowanie alternatyw, ocenę skutków i szybsze działanie z pewnością siebie.
+
+5. Najlepsze rozwiązania dotyczące używania agentów sztucznej inteligencji
+Zacznij od wyniku biznesowego , który chcesz poprawić.
+
+Automatyzacja agenta pozwala zmniejszyć powtarzalną pracę, a nie zastąpić myślenia krytycznego.
+
+Zachowaj zasady odpowiedzialnego używania sztucznej inteligencji — sprawiedliwość, niezawodność i bezpieczeństwo, prywatność i bezpieczeństwo, inkluzywność, przejrzystość, odpowiedzialność.
+
+Monitoruj wydajność i udoskonal monity, przepływy pracy i dane wejściowe.
+
+Umożliw zespołom szkolenie w celu efektywnego korzystania z Copilot.
+
+Te zasady wzmacniają niezawodne, bezpieczne wdrażanie sztucznej inteligencji na dużą skalę.
+
+Przegląd danych pod kątem dokładności, istotności, aktualności, czystości i dostępności
+Ukończone
+100 pkt.
+5 min
+Cele nauki
+Po ukończeniu tej lekcji uczniowie będą mogli wykonywać następujące czynności:
+
+Oceń jakość danych źródłowych w pięciu wymiarach: dokładność, istotność, aktualność, czystość, dostępność.
+Wyjaśnienie, dlaczego podstawy są niezbędne dla niezawodnego zachowania agenta sztucznej inteligencji.
+Zidentyfikuj źródła danych odpowiednie do obsługi sztucznej inteligencji przy użyciu platformy Microsoft 365 i programu Copilot Studio.
+Stosowanie najlepszych rozwiązań podczas przygotowywania i weryfikowania danych uziomowych.
+1. Zrozumienie uziemienia w agentach sztucznej inteligencji
+Podstawy zapewniają, że agent sztucznej inteligencji reaguje przy użyciu zaufanych, specyficznych dla domeny danych organizacyjnych, zwiększając dokładność i zmniejszając ilość niedokładnych informacji.
+
+Program Microsoft Copilot i Copilot Studio, używają indeksowania semantycznego, aby mapować zawartość przedsiębiorstwa w ramach Microsoft Graph na bogate leksykalne i semantyczne reprezentacje. Umożliwia to bardziej precyzyjne pobieranie kontekstowe.
+
+Systemy sztucznej inteligencji muszą być połączone z zatwierdzonymi danymi kontrolowanymi dostępem, aby zapewnić wiarygodne wyniki, które przestrzegają granic zabezpieczeń organizacji.
+
+Aby obsługiwać zaawansowane zastosowania, Copilot Retrieval API pobiera odpowiednie fragmenty tekstu z SharePoint, OneDrive i połączonych źródeł, z uwzględnieniem uprawnień użytkowników.
+
+2. Pięć wymiarów podstawowej jakości danych
+Dokładność 2.1
+Dane powinny odzwierciedlać rzeczywiste, weryfikowalne fakty. Niedokładna zawartość prowadzi do nieprawidłowych lub szkodliwych danych wyjściowych agenta.
+Agenci sztucznej inteligencji muszą używać zaufanych i zweryfikowanych zestawów danych podczas pobierania, aby uniknąć generowania nieprawidłowych odpowiedzi.
+
+Wskaźniki dokładności:
+
+Zweryfikowane przez MŚP
+
+Dopasowane do autorytatywnych źródeł
+
+Wolne od błędów lub nieaktualnych założeń
+
+2.2 Znaczenie
+Dane odniesienia muszą być zgodne z zamierzonym przypadkiem użycia agenta.
+
+Gdy dane są nieistotne, wyszukiwanie semantyczne może pobierać koncepcyjnie podobne — ale kontekstowo nieprawidłowe — zawartość.
+
+Istotność zapewnia, że model przedstawia informacje dopasowane do scenariusza użytkownika, przepływu pracy lub domeny biznesowej.
+
+2.3 Terminowość
+Dane wyjściowe sztucznej inteligencji ulegają pogorszeniu, gdy dane są nieaktualne.
+
+Indeks semantyczny na platformie Microsoft 365 stale aktualizuje się w miarę zmian zawartości, zapewniając warstwę uziemienia, która odzwierciedla najnowsze dokumenty, konwersacje i wiedzę.
+
+Terminowość obejmuje:
+
+Daty zmodyfikowane
+
+Aktualizacje sezonowe lub związane z przestrzeganiem przepisów
+
+Harmonogramy odświeżania danych
+
+2.4 Czystość
+Czyszczenie danych zmniejsza szum i zwiększa precyzję pobierania.
+
+Zanieczyszczenie danych w sztucznej inteligencji odnosi się do obniżenia jakości danych, które negatywnie wpływają na wydajność i niezawodność systemów sztucznej inteligencji.
+
+Czystsze dane zwiększają jakość osadzania i pomagają agentowi pobrać najbardziej odpowiednią zawartość.
+
+Charakterystyki czyszczenia danych:
+
+Przejrzysta struktura
+
+Brak duplikatów
+
+Minimalne nieistotne metadane
+
+Stabilne formatowanie i przewidywalny układ
+
+Dostępność 2.5
+Agenci mogą opierać odpowiedzi tylko na danych, do których użytkownik ma dostęp.
+
+Interfejs API pobierania uwzględnia uprawnienia i nie zwraca zawartości poza zakresem dostępu użytkownika.
+
+Dostępność zależy od:
+
+Przechowywanie danych w systemach SharePoint/OneDrive lub połączonych systemach
+
+Prawidłowe indeksowanie w programie Microsoft Graph
+
+Wyczyść mechanizmy kontroli dostępu
+
+3. Wymiary jakości fundamentalnych danych
+Wymiar	Definicja	Wpływ na wydajność agenta
+Accuracy	Dane są poprawne i weryfikowane	Zmniejsza niedokładne informacje i dezinformacji
+Relevance	Dane są dostosowane do zadania/intencji	Gwarantuje, że odpowiedzi są zgodne z zamierzonym scenariuszem
+Terminowość	Dane są aktualne.	Utrzymuje dane wyjściowe zgodne z najnowszymi zasadami lub informacjami
+Czystość	Dane są ustrukturyzowane i wolne od szumu	Poprawia precyzję pobierania
+dostępność	Dane są dostępne i indeksowalne	Zapewnia, że agent może niezawodnie funkcjonować zgodnie z uprawnieniami.
+4. Diagram: Jak Microsoft Copilot ugruntowuje odpowiedzi sztucznej inteligencji
+Diagram przedstawiający, w jaki sposób Microsoft Copilot uzasadnia odpowiedzi sztucznej inteligencji, korzystając z indeksu semantycznego i potoku API wyszukiwania.
+
+5. Najlepsze rozwiązania dotyczące przeglądania danych uziemienia
+Oceń jakość zawartości przed przekazaniem: usuń nieaktualne lub powodujące konflikt informacje.
+
+Przechowuj autorytatywną zawartość w programie SharePoint lub OneDrive , aby stała się częścią indeksu semantycznego.
+
+Zapewnij spójne formatowanie , aby poprawić czystość danych i precyzję pobierania.
+
+Regularnie przeglądaj uprawnienia, aby agenci opierali się na prawidłowych źródłach danych.
+
+Współpracuj z MŚP w domenie, aby zweryfikować dokładność i dopasowanie kontekstowe.
+
+Organizowanie danych rozwiązań biznesowych dla systemów sztucznej inteligencji
+Ukończone
+100 pkt.
+6 min
+Cele nauki
+Po zakończeniu tej jednostki uczestnicy będą w stanie:
+
+Wyjaśnienie, dlaczego dobrze zorganizowane dane rozwiązań biznesowych są niezbędne dla gotowości sztucznej inteligencji.
+Identyfikowanie składników architektury, które umożliwiają agentom sztucznej inteligencji i systemom sztucznej inteligencji korzystanie z danych organizacji.
+Zastosuj najlepsze rozwiązania dotyczące tworzenia struktur, przechowywania, indeksowania i uwidaczniania danych, dzięki czemu systemy sztucznej inteligencji mogą z nich korzystać niezawodnie.
+Dowiedz się, jak platforma Azure, bazy danych firmy Microsoft i wzorce architektury danych obsługują scenariusze sztucznej inteligencji przedsiębiorstwa.
+1. Wprowadzenie
+Systemy sztucznej inteligencji — zarówno copilot, agenci autonomiczni, jak i niestandardowe aplikacje sztucznej inteligencji — wymagają wysokiej jakości, ustrukturyzowanych i dostępnych danych. Słabo zorganizowane dane prowadzą do słabego uziemienia, niedokładnych informacji, problemów z jakością danych i zawodnego podejmowania decyzji.
+
+Organizowanie danych rozwiązania biznesowego jest nie tylko wymaganiem technicznym, ale również imperatywem biznesowym. Gdy dane są prawidłowo ustrukturyzowane, stają się dostępne dla:
+
+Copilot dla Microsoft 365
+
+Agenci sztucznej inteligencji wbudowani w program Copilot Studio
+
+Niestandardowe aplikacje sztucznej inteligencji utworzone za pomocą sztucznej inteligencji platformy Azure
+
+Procesy generacji z wzmocnionym wyszukiwaniem (RAG)
+
+Rozwiązania do analizy i automatyzacji
+
+Retrieval Augmented Generation (REG) to architektura oddzielająca prototypy od zaufanych systemów. Potok RAG to system, który wykonuje wszystkie kroki potrzebne do prawidłowego działania RAG w środowisku produkcyjnym, takie jak obsługa pozyskiwania danych, przesyłanie strumieniowe, czyszczenie, fragmentowanie, osadzanie, indeksowanie, pobieranie, montowanie monitów, orkiestracja i monitorowanie, które umożliwiają dużemu modelowi językowemu (LLM) wykorzystanie pobranego kontekstu podczas generowania odpowiedzi. Istnieje kilka zalet korzystania z potoków RAG:
+
+Zwiększanie możliwości rozwiązań LLM przy użyciu dostępu do danych w czasie rzeczywistym
+
+Zachowywanie prywatności danych
+
+Ograniczanie niedokładnych informacji dotyczących usługi LLM
+
+W tej lekcji wyjaśniono, jak zorganizować dane biznesowe, aby stać się użyteczne, wykrywalne, bezpieczne i zoptymalizowane pod kątem użycia sztucznej inteligencji w całej organizacji.
+
+2. Kluczowe pojęcia dotyczące organizowania danych AI-Ready
+2.1 Wdrażanie transformacji za pomocą platform Azure Data & AI
+(Od: Korzystanie z narzędzi sztucznej inteligencji — napędzanie transformacji na platformie Azure)
+
+Platforma Azure udostępnia podstawowe składniki niezbędne do centralizacji, przekształcania i zarządzania danymi przed korzystaniem z nich przez systemy sztucznej inteligencji. Kluczowe pojęcia obejmują:
+
+Ujednolicony majątek danych: konsolidowanie danych z aplikacji, dzienników, CRM, ERP, operacji i dokumentów.
+
+Nowoczesne usługi danych: Azure Cosmos DB, Azure SQL, Azure PostgreSQL, Fabric Lakehouse.
+
+Warstwy analizy: Azure AI Search, semantyczny ranking, osadzanie, wyszukiwanie wektorowe.
+
+Współdziałanie: interfejsy API, centra zdarzeń i przesyłanie strumieniowe danych umożliwiają korzystanie z tych samych danych przez wiele systemów sztucznej inteligencji.
+
+Azure Data Estate for AI:
+
+warstwa	Przeznaczenie
+Operacyjne bazy danych	Przechowywanie aplikacji i danych biznesowych ze strukturą
+Magazyny analityczne (Lakehouse/ Warehouse)	Przygotowywanie wyselekcjonowanych danych na potrzeby sztucznej inteligencji/uczenia maszynowego
+Warstwa analizy (wyszukiwanie i indeks wektorowy)	Włącz uziemienie, pobieranie i wyszukiwanie semantyczne
+Aplikacje sztucznej inteligencji i agenci	Copilot, niestandardowe aplikacje RAG, agenci autonomiczni
+2.2 Architektura danych dla agentów sztucznej inteligencji w całej organizacji
+(Od: Architektura danych dla agentów sztucznej inteligencji w całej organizacji — Cloud Adoption Framework)
+
+Przewodnik Cloud Adoption Framework firmy Microsoft definiuje sposób projektowania architektury danych zoptymalizowanej pod kątem agentów sztucznej inteligencji:
+
+Scentralizowane źródła wiedzy: SharePoint, OneDrive, Dataverse, Azure Storage.
+
+Indeksowanie semantyczne: konwertuje zawartość przedsiębiorstwa na semantyczne reprezentacje na potrzeby uziemienia.
+
+Warstwa zarządzania danymi: dostęp oparty na rolach, etykiety poufności, Microsoft Purview.
+
+Interfejsy API i łączniki: Upewnij się, że agenci sztucznej inteligencji mogą uzyskiwać dostęp do danych ustrukturyzowanych i nieustrukturyzowanych.
+
+Architektura gotowa do użycia w środowisku RAG: magazyny wektorów, osadzanie modeli, pobieranie potoków.
+
+Diagram wizualny — architektura danych agenta sztucznej inteligencji
+
+Przygotowanie baz danych do pracy z AI
+(Od: Tworzenie inteligentnych aplikacji sztucznej inteligencji przy użyciu baz danych firmy Microsoft)
+
+Technologie bazy danych firmy Microsoft zapewniają wbudowaną analizę sztucznej inteligencji:
+
+Azure SQL — obsługuje dane wektorowe, wyszukiwanie semantyczne, magazyn JSON.
+
+Cosmos DB — małe opóźnienie dla aplikacji opartych na sztucznej inteligencji, natywnej możliwości wyszukiwania wektorów.
+
+Usługa PostgreSQL na platformie Azure — obsługuje rozszerzenia uczenia maszynowego i osadzanie.
+
+Sieć szkieletowa — udostępnia ujednoliconą platformę analizy dla obciążeń sztucznej inteligencji.
+
+Przypadki użycia:
+
+Przechowywanie osadzania dla aplikacji RAG
+
+Zarządzanie zawartością ustrukturyzowaną i nieustrukturyzowaną
+
+Obsługa decyzji dotyczących agentów sztucznej inteligencji w czasie rzeczywistym
+
+Wykonywanie transakcji o wysokiej przepustowości wymaganych przez autonomiczne agenty
+
+3. Najlepsze rozwiązania dotyczące organizowania danych biznesowych dla systemów sztucznej inteligencji
+✔ 1. Scentralizowanie danych
+
+Użyj platformy Azure, usługi Dataverse lub sieci szkieletowej, aby uniknąć rozproszonych silosów danych.
+
+✔ 2. Normalizacja i struktura danych
+
+Systemy sztucznej inteligencji działają lepiej przy użyciu ustandaryzowanego schematu, nazewnictwa, metadanych i taksonomii.
+
+✔ 3. Korzystanie z indeksowania semantycznego
+
+Rozwiązanie Microsoft 365 Copilot wymaga poprawnego indeksowania semantycznego na potrzeby uziemienia zawartości.
+
+✔ 4. Podaj wiele ścieżek dostępu
+
+Uwidaczniaj dane za pomocą:
+
+API-e
+
+Indeksy wyszukiwania
+
+Rurociągi RAG
+
+Łączniki programu Graph
+
+Punkty końcowe SQL
+
+✔ 5. Wczesne wdrażanie zarządzania
+
+Użyj usługi Purview dla:
+
+Zasady dostępu
+
+Etykiety wrażliwości
+
+Pochodzenie
+
+Reguły jakości danych
+
+✔ 6. Zachowaj autorytatywne i zaktualizowane dane
+
+Terminowość jest kluczowa — systemy sztucznej inteligencji muszą odwoływać się do najnowszych informacji.
+
+Podsumowanie
+Ukończone
+100 pkt.
+3 min
+Ten moduł zawiera podstawową wiedzę na temat analizowania, projektowania i implementowania opartych na sztucznej inteligencji rozwiązań biznesowych, koncentrując się na strategicznej roli agentów sztucznej inteligencji w zakresie automatyzacji zadań, analizy danych, podejmowania decyzji i zarządzania danymi przedsiębiorstwa. Podkreśla integrację technologii generacyjnych sztucznej inteligencji i rozwiązania Microsoft Copilot w znanych narzędziach biznesowych w celu zwiększenia produktywności, wydajności i odpowiedzialnego wdrożenia sztucznej inteligencji.
+
+Najważniejsze wnioski:
+
+Agenci sztucznej inteligencji w rozwiązaniach biznesowych:
+
+Agenci sztucznej inteligencji automatyzują rutynowe zadania, dostarczają szczegółowe informacje oparte na danych i obsługują podejmowanie decyzji przez zintegrowanie kontekstu przedsiębiorstwa z generowaniem sztucznej inteligencji.
+
+Narzędzia, takie jak Microsoft Copilot, zwiększają produktywność w programach Word, Outlook, Teams i Dynamics 365, opracowując zawartość, podsumowując informacje i włączając interakcje w języku naturalnym.
+
+Możliwości generowania sztucznej inteligencji:
+
+Generatywna sztuczna inteligencja przyspiesza produktywność dzięki tworzeniu oryginalnej zawartości (tekst, obrazy, wideo, audio, kod) i wspierając zapytania w języku naturalnym.
+
+Dzięki temu pracownicy mogą pracować szybciej i z większą pewnością, zwiększając kreatywność i efektywność.
+
+Automatyzacja zadań, analiza i podejmowanie decyzji:
+
+Agenci sztucznej inteligencji usprawniają komunikację, dokumentację, automatyzację procesów i pobieranie wiedzy.
+
+W analizie danych agenci podsumowują złożone zestawy danych, identyfikują trendy, generują wizualizacje i sugerują akcje.
+
+W przypadku podejmowania decyzji udostępniają zalecenia dotyczące scenariuszy, identyfikację ryzyka i szczegółowe informacje oparte na kontekście.
+
+Dane bazowe dla niezawodnej sztucznej inteligencji:
+
+Uziemienie zapewnia, że agenci sztucznej inteligencji używają zaufanych danych specyficznych dla domeny, zwiększając dokładność i zmniejszając niedokładne informacje (pewnie niepoprawne odpowiedzi).
+Pięć wymiarów podstawowej jakości danych:
+
+Dokładność: Dane są poprawne i weryfikowane.
+Istotność: dane pasują do zamierzonego przypadku użycia.
+Aktualność: Dane są aktualne i zgodne z najnowszymi informacjami.
+Czystość: Dane są ustrukturyzowane i wolne od hałasu.
+Dostępność: dane są dostępne i indeksowalne na uprawnienia użytkownika.
+Technologie, takie jak indeksowanie semantyczne i API Copilot Retrieval, umożliwiają precyzyjne pobieranie danych z uprawnieniami.
+
+Organizowanie danych rozwiązania biznesowego:
+
+Dobrze zorganizowane, scentralizowane i ustrukturyzowane dane są niezbędne dla przygotowania do AI i wysokiej jakości wyników agentów.
+
+Kluczowe składniki architektury obejmują platformy Azure, bazy danych firmy Microsoft, indeksowanie semantyczne i narzędzia ładu (np. Microsoft Purview).
+
+pipeliny generacji wspomaganej wyszukiwaniem (RAG) umożliwiają systemom sztucznej inteligencji dostęp do wiarygodnych danych w czasie rzeczywistym, przy jednoczesnym zachowaniu prywatności i łagodzeniu potencjalnych zagrożeń.
+
 
 
