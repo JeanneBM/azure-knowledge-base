@@ -1,0 +1,341 @@
+Introduction
+Completed
+100 pkt.
+2 minutes
+Scenario
+Imagine you build agents at Contoso, and your HR self-service agent answers employee questions about leave policies. The answers are accurate, but they arrive as walls of unformatted text that are hard to scan, easy to dismiss, and nothing like the polished, purposeful experience employees expect from a workplace tool. On top of that, when an employee wants to submit a leave request, the agent walks them through four separate question-and-answer turns, asking for dates, leave type, and reason one at a time. There's a better way.
+
+Microsoft Copilot Studio gives you the tools to go far beyond plain text. Using message node formatting, you can structure agent responses with text markup, images, videos, and quick reply buttons. With Adaptive Cards, you can present information as a visually rich, scannable layout and collect structured input from users in a single interactive form, all without writing code.
+
+ Notatka
+
+Microsoft Copilot Studio has introduced a new experience with updated features, capabilities, and navigation. This module is based on the classic experience. For more information, see Classic vs. new agent experience.
+
+What you'll learn
+In this module, you learn to configure message formatting options, design informational Adaptive Cards that display structured data in clean layouts, configure Ask with Adaptive Card nodes that collect input without multi-turn questioning, use the built-in Adaptive Card designer and JSON editor, and apply channel-specific schema considerations so your cards render correctly in Microsoft Teams, the web chat surface, and beyond. The Contoso HR scenario threads through each unit to show how these capabilities come together in a real workplace context.
+
+Goal
+By the end of this module, you'll be able to build professional, interactive agent experiences designed for real workplaces, going well beyond plain text to create responses that are clear, engaging, and easy to act on.
+
+Configure message formatting in agent topics
+Completed
+100 pkt.
+8 minutes
+Right now, the Contoso HR agent answers employee questions, but the responses arrive as blocks of unstyled text that take effort to read. Accurate content buried in a wall of text still creates friction. Before moving to Adaptive Cards, it's worth understanding what the message node can already do. Copilot Studio gives you a formatting toolbar, image and video support, message variations, and quick reply buttons, all within a single node and all without writing code.
+
+Format text in the message node
+The message node includes a lightweight formatting toolbar that controls how text appears in the conversation.
+
+Screenshot of a message node in Copilot Studio.
+
+The toolbar lets you apply:
+
+Bold and italic for emphasis on key terms
+Bulleted and numbered lists to organize related information
+Line breaks to control spacing and readability
+ Notatka
+
+Text formatting renders differently across channels. Bold and italic work consistently in Microsoft Teams and the web chat surface, but some channels strip formatting entirely. You'll explore channel-specific rendering in detail in a later unit.
+
+Personalize messages using variables
+Beyond text styling, the toolbar includes a variable insertion control — the {x} icon — that lets you personalize messages at runtime using topic variables, global variables, or system variables. Selecting it opens a variable picker; the chosen variable is inserted at the cursor and resolved to its runtime value when the topic runs.
+
+For the Contoso HR agent, this might mean opening the leave policy response message and inserting System.User.DisplayName to greet the employee by name, applying bold to highlight entitlement totals, and a bulleted list for the policy conditions. The same content that took a paragraph to parse now takes a glance—without any change to the underlying information.
+
+Add images and videos to a message node
+Text formatting improves readability, but a relevant visual can explain in seconds what text covers in paragraphs. For the Contoso HR agent, adding a diagram of the leave request process or a short walkthrough video removes ambiguity for employees who prefer visual guidance over written instructions.
+
+Both images and videos are added through the message node's Add menu. Images require a publicly hosted URL; videos accept a direct MP4 link or a YouTube URL. Both support an optional title that appears alongside the media.
+
+Images and videos appear as cards within the message. When you add more than one media card to a single node, they display in a carousel by default, showing one card at a time with navigation arrows. To display all cards at once, select one of the cards and switch to List view using the icon in the node's menu bar. List view is useful when you want the employee to compare all options without having to scroll through them one at a time.
+
+ Ważne
+
+Images and videos must be hosted at publicly accessible URLs. The agent can't reach files stored on internal servers or behind authentication. For the Contoso HR scenario, this requirement means hosting assets in a SharePoint library with anonymous link sharing enabled, or in Azure Blob Storage with public read access.
+
+Keep responses fresh with message variations
+An agent that says exactly the same thing every time feels mechanical, especially for employees who interact with the HR agent regularly. Message variations let you define multiple phrasings for a single message node. Each time the node runs, Copilot Studio randomly selects one variation to send, so the experience feels different on repeated visits.
+
+Variations are added through the Add menu on the message node. Each variation appears as a separate text box where you enter the alternate phrasing; add as many as needed.
+
+For the Contoso HR agent's greeting message, instead of always displaying "Hello! How can I help with your leave questions today?", you could add variations like "Hi there, what would you like to know about your leave?" or "Good to see you. What can I help with today?" The agent rotates through these variations randomly, which makes repeated interactions feel more natural over time.
+
+Each variation supports the same features as the primary message, including bold, lists, variable insertion, and images. Variations should deliver the same core information in different words, not introduce different guidance. If one variation mentions submission deadlines, all variations should.
+
+Guide users with quick replies
+Even a well-formatted message can leave employees uncertain about what to type next. Quick replies are tappable suggestion buttons that appear below a message and advance the conversation when selected. The employee selects a quick reply instead of typing freely, which reduces input errors and shortens the path to a resolution.
+
+For the Contoso HR agent's opening message, quick replies like Annual leave, Sick leave, Parental leave, and Submit a leave request give employees an immediate, clear set of directions to choose from.
+
+Quick replies are added through the Add menu. Replies can enable the user to send a message to the agent, open a URL, make a call, or send a hidden message. A standard "Send a message" quick reply has a Title property (the text displayed on the button), a Text property (the message sent to the agent when selected), and a Type that controls the action.
+
+Quick replies differ from the multiple-choice options on a Question node in an important way: quick replies are suggestions, not requirements. An employee can ignore them and type freely at any time. The Question node enforces a choice—it doesn't advance the conversation until the employee selects or enters a recognized option. Use quick replies when you want to guide; use a Question node when you need to constrain.
+
+ Napiwek
+
+On mobile surfaces, quick replies are especially effective. Tapping a button is faster and less error-prone than typing, making the use of quick replies a small design choice with real impact for mobile employees.
+
+Next step: Adaptive Cards
+Text markup, images, videos, variations, and quick replies give you meaningful control over how information reaches employees. What these options don't provide is a way to present structured, data-rich content in a genuinely visual layout. Displaying a leave balance, for example, ideally means labeled fields, entitlement totals, and remaining days arranged side by side, not just a sentence describing them.
+
+That's where Adaptive Cards come in. In the next unit, you'll learn how to design an Adaptive Card that transforms the Contoso HR agent's leave policy response into a rich, scannable layout with labeled data fields.
+
+Design informational Adaptive Cards for agent responses
+Completed
+100 pkt.
+8 minutes
+In the previous unit, you learned how to configure the message node's formatting toolkit: bolding key terms, adding images, and guiding employees with quick replies. Those tools work well for structured text responses. But when the Contoso HR agent needs to display a leave balance summary — showing leave type, total entitlement, and remaining days side by side — a plain message node can't arrange that information into a labeled, scannable layout. A sentence describing the numbers works; a card that presents them in organized columns makes them instantly readable.
+
+Adaptive Cards solve this problem. Adaptive Cards are an open card format from Microsoft — supported across Teams, Outlook, Power Apps, and other Microsoft surfaces — that let you define a visual layout in JSON and have any supporting host render it natively. In Copilot Studio, you build Adaptive Cards using a visual designer, and, when needed, refine them by editing the JSON directly. Once the layout is right, you bind topic variable data to card fields using Power Fx, so the card content reflects real runtime values rather than hardcoded text.
+
+This unit uses the Contoso HR leave balance card as a concrete example to illustrate each concept, from building the card structure in the designer to binding topic variable data to card fields with Power Fx.
+
+Two ways Adaptive Cards appear in topics
+Before building, it helps to understand the two distinct roles Adaptive Cards can play in a Copilot Studio topic:
+
+Informational (message node): The card is embedded in a Send a message node. It displays rich content and the conversation continues automatically. No user input is collected from the card.
+Interactive (Ask with Adaptive Card node): The card functions as an input form with text fields, dropdowns, and date pickers. User entries map directly to topic variables.
+This unit focuses on the informational pattern. You'll learn to configure the interactive counterpart in the next unit.
+
+Build a card in the Adaptive Card designer
+The Adaptive Card designer is built directly into Copilot Studio. It's a visual drag-and-drop editor that generates valid JSON behind the scenes, so starting there avoids syntax errors and gives you a correctly structured card quickly.
+
+Adding an Adaptive Card starts in the topic's authoring canvas. With the message node selected, you choose Add from the node's menu bar, select Adaptive Card, and then select Edit adaptive card to open the designer.
+
+The designer provides three core areas: a card preview that shows how the card renders as you build it, an element toolbox where you browse and select card elements to add, and a properties panel where you configure the selected element.
+
+Adaptive Card element types
+Adaptive Card elements fall into two categories.
+
+Layout elements control card structure:
+
+Container: groups related elements and applies shared spacing or a background style
+ColumnSet: divides content into a horizontal row of columns
+Column: holds one portion of a ColumnSet row
+Content elements display data:
+
+TextBlock: renders text with configurable size, weight, and wrapping behavior
+Image: renders a photo or icon from a URL
+For the Contoso HR leave balance card, a card structure might look like this:
+
+A Container that groups all card content and applies consistent padding
+A ColumnSet with two Column elements: one for the leave type label and entitlement total, another for the remaining balance
+TextBlock elements inside each column for the text content
+An optional Image element at the top of the container for a leave category icon
+Screenshot of a sample leave balance summary Adaptive Card.
+
+Elements are added by dragging them from the toolbox into position on the canvas. Selecting any element in the preview opens its properties panel, where values like Text for a TextBlock or URL for an Image are configured, along with size, weight, and color.
+
+A key design principle: limit each card to three to five data points. A card that tries to show everything becomes unreadable, especially on mobile. For the Contoso HR leave balance card, that means leave type, total entitlement, and remaining balance. Nothing more.
+
+ Napiwek
+
+Use ColumnSet to arrange comparable data side by side. For the HR leave balance card, this means leave type in the left column and remaining days in the right, aligned and scannable at a glance, rather than stacked across separate paragraphs. The same pattern applies equally to other data-rich scenarios, such as a product catalog agent showing a product image, name, and price in a single card.
+
+Refine the card in JSON view
+The designer exposes the most common element properties, but some styling options are only available in the JSON directly. Switching to JSON is the right move for targeted manual adjustments—not for building the card structure from scratch.
+
+Selecting Edit JSON in the designer opens the full card definition in an editor. After making targeted changes, selecting Save returns to the preview with the updates applied.
+
+Common reasons to edit JSON directly include:
+
+Setting "wrap": true on a TextBlock so long text wraps instead of truncating with an ellipsis
+Applying "spacing" properties to control padding between elements
+Setting "style" on a Container; for example, "emphasis" adds a subtle background that visually groups related content
+Adjusting "minHeight" on containers to keep card sizes consistent across a carousel
+When you save JSON edits, the designer updates the preview immediately. If the JSON contains a syntax error, the preview pane shows a warning, making it straightforward to identify problems before the topic runs in a channel.
+
+ Napiwek
+
+The Adaptive Cards Hub is Microsoft's reference site for Adaptive Cards. Its designer supports Microsoft-specific elements and is a useful companion for drafting and previewing card JSON outside of Copilot Studio before you add it to a topic.
+
+Bind topic variables to card fields with Power Fx
+A card with hardcoded text works well for fixed content like a standard policy overview that never changes. But when card content comes from a connector action, HTTP request, or earlier step in the topic flow, the card needs to reflect runtime values. Copilot Studio supports Power Fx for this purpose.
+
+The recommended approach is to compute the needed values into topic variables earlier in the topic flow, then reference those variables when configuring the card's text-type properties. For the Contoso HR leave balance card, suppose an earlier topic step stores the employee's remaining annual leave days in Topic.AnnualLeaveBalance. You'd reference this variable when setting the TextBlock's text value, so the card reflects the actual balance at runtime rather than a hardcoded number. At render time, Copilot Studio evaluates the expression and substitutes the variable value before displaying the card.
+
+If you need to manipulate a value before displaying it, such as formatting a number with a unit label, compute the result into a topic variable earlier in the topic flow and reference that variable in the card rather than attempting the transformation inline.
+
+ Notatka
+
+The next unit covers Power Fx variable binding in more detail for the Ask with Adaptive Card node, which includes a dedicated formula mode for referencing topic variables directly in card properties.
+
+Show multiple cards in a carousel or list
+When a message node contains more than one Adaptive Card, Copilot Studio renders them in a layout you control:
+
+Carousel: Cards display side by side with navigation arrows. The user sees one card at a time and navigates horizontally. This layout works well when each card describes a distinct item and the expected interaction is to act on one result at a time.
+List: All cards stack vertically in the conversation. The user sees every result by scrolling down. This layout is better when the user needs to compare all options at once, or when the response includes only two or three cards.
+To switch between layouts, select any Adaptive Card in the message node and use the layout toggle in the node's menu bar.
+
+For the Contoso HR agent displaying annual, sick, and parental leave summaries, list layout is the right choice. Employees need to compare all three leave types at once, and stacking the cards vertically lets them scroll through the full picture without navigating card by card. Carousel layout suits a different pattern: when an agent returns multiple distinct items that the user acts on one at a time, such as a product catalog agent showing individual product results.
+
+ Notatka
+
+Carousel rendering varies by channel. Microsoft Teams renders carousels with horizontal navigation as expected. Some channels stack cards vertically regardless of the layout setting. You'll explore channel-specific rendering behavior in the final unit of this module.
+
+Next step
+Informational Adaptive Cards let you present structured data—product results, leave balances, policy summaries—in a layout that's scannable, visually organized, and dynamically populated from topic variables. The card surfaces the data and the conversation moves on. But what if you need the card to do more than display information? In the next unit, you configure an Ask with Adaptive Card node that transforms a card into an interactive form, letting employees submit a leave request in a single step, directly in the conversation.
+
+Collect user input with interactive Adaptive Cards
+Completed
+100 pkt.
+8 minutes
+Informational Adaptive Cards display structured data and let the conversation continue automatically, but the Contoso HR agent needs more than a display. When an employee wants to submit a leave request, the agent needs to collect four related fields: leave type, start date, end date, and reason. Walking through each field one at a time with separate Question nodes within the topic adds four turns to the conversation. The Ask with Adaptive Card node handles all four fields in a single topic step instead. It presents a card with built-in input elements, like dropdowns and text fields, that map directly to topic variables when the employee submits the form.
+
+Choose the right user input node for the job
+There are two node types that can collect input from a user in a topic. The Question node works well for collecting one value at a time, such as a short text response, a number, or a yes-or-no confirmation. Each Question node adds one turn to the conversation, and for straightforward branching scenarios that's perfectly fine.
+
+When you need several related values up front — such as the leave type, start date, end date, and reason for a leave request — the Ask with Adaptive Card node gives you a better approach. The employee sees a single card with all the fields at once, fills them in, and submits. The agent receives all values in one response, reducing four exchanges to one. For employees submitting routine requests, this consolidation makes the agent feel faster and more purposeful.
+
+For the Contoso HR scenario, you'd use Ask with Adaptive Card for the leave request form and keep the Question node for standalone confirmations and simple follow-ups where a single value is all you need.
+
+Add input elements to your card
+The Ask with Adaptive Card node opens the same Adaptive Card designer described in the previous unit, with one key addition: input elements are now available in the element toolbox. Adaptive Cards supports six input element types:
+
+Input.Text: A single-line or multiline text field for open-ended text responses.
+Input.Number: A numeric input field with optional min and max constraints.
+Input.Date: A date picker that returns a date string in YYYY-MM-DD format.
+Input.Time: A time picker that returns a time string in HH:MM format.
+Input.Toggle: A checkbox that returns true or false. Use this element for boolean fields.
+Input.ChoiceSet: Renders as a dropdown list or a set of radio buttons. Use this element type when the user should select from a predefined set of options rather than entering free text.
+For the Contoso HR leave request form, a typical card uses the following:
+
+Screenshot of a sample leave request form Adaptive Card.
+
+An Input.ChoiceSet for leave type, configured with choices for Annual Leave, Sick Leave, and Parental Leave
+Input.Date fields for start date and end date
+An Input.Text field with Multiline enabled for the reason
+The start and end date fields are marked as Required in the properties panel, which prevents the form from being submitted without dates.
+
+Configure the Submit button
+Every Ask with Adaptive Card form needs an Action.Submit element—the button that sends the employee's entries back to the agent. Copilot Studio adds a default Submit button automatically, but you should customize the label to match your scenario.
+
+Selecting the Submit button in the designer opens its properties, where the Title field controls the button label. For the leave request form, Submit request is more specific and actionable than the default Submit.
+
+When the employee selects the button, all populated input fields are packaged and sent to the agent as a single payload. Copilot Studio then maps each id to its corresponding topic variable and makes those variables available to every node that follows in the topic flow.
+
+Work with output variables
+Each input element used within the Adaptive Card has an ID property. Once a user submits the card, Copilot Studio automatically creates a topic variable for each input element based on its id. If you leave the default IDs (input1, input2, input3, input4), the resulting variables are Topic.input1, Topic.input2, and so on, which are technically correct but hard to work with in subsequent nodes.
+
+Instead, set descriptive camelCase IDs. For the leave request card with IDs leaveType, startDate, endDate, and leaveReason, the variables are:
+
+Topic.leaveType: the selected leave type string
+Topic.startDate: the entered start date
+Topic.endDate: the entered end date
+Topic.leaveReason: the employee's reason text
+These variables could be referenced in a subsequent Send a message node to confirm the request before passing the data to a connector. For example: "Your Annual Leave request from 2027-01-11 to 2027-01-15 has been submitted." They can also be passed directly to an agent flow or tool call that creates the leave record in the HR system, with no manual parsing or transformation required.
+
+Handle unsubmitted cards
+Not every employee who sees the leave request form completes it. If an employee closes the card without selecting Submit, the output variables remain empty; Copilot Studio doesn't generate any value from an unsubmitted card.
+
+ Ważne
+
+Always add a Condition node immediately after an Ask with Adaptive Card node to check whether the required variables contain values. For a leave request form, you'd check that the leave type field isn't blank as a minimum condition. When the variable is empty, the conversation would route to a handling branch — such as a message offering to restart the form — rather than continuing to downstream nodes that expect the variables to be populated. Skipping this check causes errors that are difficult to trace back to the dismissed card.
+
+Handle submissions with consecutive cards
+If your agent sends multiple Adaptive Cards in a conversation (for example, consecutive cards, retries, or interruptions), users might select Submit on an earlier card. To help your agent or custom client distinguish which card and action a response came from, include a unique identifier in each submit action's data payload and validate it when processing the response.
+
+Example:
+
+JSON
+{
+  "type": "Action.Submit",
+  "title": "Confirm",
+  "data": {
+    "actionSubmitId": "booking_confirm_card_v3_confirm"
+  }
+}
+Populate a dropdown dynamically with Power Fx
+The leave type choices in this example are hardcoded in the card designer, which works well for a stable list that rarely changes. In some scenarios, the available options come from an earlier step in the topic—for example, an HTTP request that retrieves valid leave categories from the HR system at runtime. Power Fx lets you bind a topic variable directly to an Input.ChoiceSet's choices property.
+
+In the card's JSON, replace the hardcoded choices array with a Power Fx expression:
+
+JSON
+{
+  "type": "Input.ChoiceSet",
+  "id": "leaveType",
+  "label": "Leave type",
+  "choices": "=Topic.AvailableLeaveTypes"
+}
+Topic.AvailableLeaveTypes must be a table with title and value columns—the format that Input.ChoiceSet expects. This follows the same Power Fx binding pattern for the Ask with Adaptive Card node: a = expression substituted in place of a literal value in the card JSON. This pattern works well for scenarios where the option list genuinely varies by user, region, or policy. For stable lists like Contoso's three leave categories, hardcoded choices are simpler and less prone to runtime errors.
+
+Next step
+You can now both display data with informational Adaptive Cards and collect structured input with interactive forms, covering the full range of what Adaptive Cards offer in a Copilot Studio topic. The remaining question is whether these cards render consistently everywhere employees access the Contoso HR agent. In the next unit, you explore how Adaptive Card schema versions and channel-specific behavior affect rendering in Microsoft Teams, the web chat surface, and other deployment environments, so that you can design cards that work well regardless of where your agent is deployed.
+
+Apply channel-specific considerations for Adaptive Cards
+Completed
+100 pkt.
+6 minutes
+Picture this scenario: an Adaptive Card for the Contoso HR leave balance summary looks perfect in the designer preview, with a clean multi-column structure, styled containers, and everything in place. Testing in the web chat surface confirms it renders correctly. Then the same agent is opened in Microsoft Teams, and the card is gone, replaced with a plain text fallback or a blank space where the card should appear. What happened?
+
+Schema version incompatibility. Versioned schemas are used to describe the features available to Adaptive Cards. Each channel that renders cards supports a maximum schema version. Elements you reference from a newer schema version don't render in channels that aren't implementing that version yet. Understanding this incompatibility before you design, not after, saves significant rework.
+
+Adaptive Card schema support by channel
+Copilot Studio supports different maximum Adaptive Card schema versions depending on where your agent is deployed:
+
+Channel	Maximum schema version
+Microsoft Teams	v1.5
+Live Chat (Omnichannel)	v1.5
+Web channel	v1.6
+ Ostrzeżenie
+
+If your card JSON references v1.6 features — such as certain layout properties or element types introduced in that version — and the agent is deployed to Microsoft Teams or Live Chat, those elements either fail silently or cause the entire card to fall back to plain text. The Adaptive Card designer doesn't warn you about this incompatibility during design time.
+
+ Notatka
+
+The web channel has an additional restriction: it doesn't support Action.Execute. If your card uses Action.Execute for button actions, use Action.Submit instead to ensure compatibility on the web channel.
+
+The practical implication: a card that looks correct in the web channel test pane might behave much differently when the same agent surfaces in Teams. For the Contoso HR agent, which targets both Teams and the company's internal web portal, this version mismatch is a real risk that requires deliberate attention.
+
+Check and set the schema version in JSON
+Every Adaptive Card JSON definition includes a version property that declares which schema version the card uses. In the card's JSON view, the version property appears near the top of the definition alongside $schema. To target Teams and Live Chat compatibility, set the value to "1.5". The JSON structure looks like this:
+
+JSON
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.5",
+  ...
+}
+If you copied a card from the Adaptive Cards Hub or another external source, always verify the version field before embedding it in your topic. Using a card without checking the version is one of the most common causes of rendering failures in production deployments.
+
+Test in the actual target channel
+The test pane in Copilot Studio renders Adaptive Cards using the web channel engine, which supports schema version 1.6. This makes it a reasonable proxy for web channel behavior, but not for Teams or Live Chat, where only v1.5 is supported. In addition, the authoring canvas itself does not render v1.6 cards at all — only the test pane does. A card using v1.6 features may therefore look correct in the test pane while failing entirely in Teams.
+
+ Napiwek
+
+Always test your Adaptive Card in the actual target channel before considering the design complete. For the Contoso HR agent, that means publishing a test version and opening it in both Microsoft Teams and the web portal. A card that renders correctly in the Copilot Studio test pane may still surface layout differences or silent omissions in Teams.
+
+Testing in Teams requires publishing the agent, then triggering the topic that renders the card directly in the Teams client. For the web channel, use the web chat surface embedded in Copilot Studio or a test page. Comparing both outputs side by side reveals rendering differences before the card reaches employees.
+
+Choose a design strategy for cross-channel agents
+When your agent targets more than one channel, you have two practical approaches to Adaptive Card design.
+
+Option 1: Design to v1.5 (recommended)
+
+Use only schema elements available in v1.5 for all cards. This approach ensures consistent rendering across Teams, Live Chat, and the web channel without any special handling. You give up the small set of layout improvements introduced in v1.6, but you gain predictability and simplicity. In many cases, including for the Contoso HR agent, limiting the design to schema elements available in v1.5 is the right default choice.
+
+ Ważne
+
+If your agent is deployed to Microsoft Teams or Live Chat for any part of its audience, design all cards to v1.5. This design choice eliminates an entire category of rendering bugs and is the most common approach in production deployments.
+
+Option 2: Apply channel detection with card variants
+
+For agents where the v1.6 layout improvements are genuinely valuable for web users, topic-level conditions can route each channel to a different card version. This adds maintenance overhead with two card definitions to keep in sync, so it's best reserved for scenarios where the visual difference justifies the complexity.
+
+For the Contoso HR agent, the added complexity of maintaining two card variants isn't justified. Option 1 remains the better fit.
+
+Channel considerations apply to quick replies too
+Quick replies, introduced earlier in the module, are also subject to channel limitations.
+
+ Ważne
+
+Some channels don't support quick replies at all. In those channels, the quick reply buttons simply don't appear. The message is still delivered, but without the suggestion buttons. Other channels support quick replies but limit how many can be displayed at once, silently hiding any that exceed the limit.
+
+The practical implication for the Contoso HR agent is the same as with Adaptive Cards: don't design a response that relies on quick replies as the only way to advance the conversation. Employees on unsupported channels need another path forward, such as clear message text that prompts them to type a response. Testing in each target channel is always recommended.
+
+Next step
+With a clear picture of schema compatibility and channel-specific rendering behavior, you're ready to test your understanding. The next unit covers the key concepts from this module: Adaptive Card patterns, designer usage, Power Fx data binding, and the channel considerations explored here.
+
+
+
